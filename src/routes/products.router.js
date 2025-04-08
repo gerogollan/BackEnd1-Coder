@@ -1,10 +1,8 @@
-import { Router } from 'express';
-import ProductManager from '../managers/productManager.js';
-
+import { Router } from "express";
+import ProductManager from "../managers/productManager.js";
 
 const router = Router();
-const productManager = new ProductManager('./src/data/products.json');
-
+const productManager = new ProductManager("./src/data/products.json");
 
 // Obtener todos los productos
 router.get("/", async (req, res) => {
@@ -16,7 +14,8 @@ router.get("/", async (req, res) => {
 router.get("/:pid", async (req, res) => {
   const { pid } = req.params;
   const product = await productManager.getProductByID(pid);
-  if (!product) return res.status(404).json({ error: "Producto no encontrado" });
+  if (!product)
+    return res.status(404).json({ error: "Producto no encontrado" });
   res.json(product);
 });
 
@@ -32,7 +31,13 @@ router.post("/", async (req, res) => {
     req.body.category,
     req.body.thumbnails
   );
-  if (!newProduct) return res.status(400).json({ error: "Missing fields, Invalid fields entry or product already in existence" });
+  if (!newProduct)
+    return res
+      .status(400)
+      .json({
+        error:
+          "Missing fields, Invalid fields entry or product already in existence",
+      });
   res.status(201).json(newProduct);
 });
 
@@ -53,8 +58,8 @@ router.delete("/:pid", async (req, res) => {
 });
 
 //Para el 404
-router.use((req,res) =>{
-    res.status(404).send("Error 404, Page not found, try to go back!!")
-})
+router.use((req, res) => {
+  res.status(404).send("Error 404, Page not found, try to go back!!");
+});
 
 export default router;

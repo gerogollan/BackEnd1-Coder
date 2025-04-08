@@ -48,7 +48,8 @@ class ProductManager {
     try {
       const data = await fs.readFile(this.path, "utf-8");
       const products = JSON.parse(data);
-      const id = products.length > 0 ? products[products.length - 1].id + 1 : 1;
+      const id =
+        products.length > 0 ? Math.max(...products.map((p) => p.id)) + 1 : 1;
 
       if (
         !title ||

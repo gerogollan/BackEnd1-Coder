@@ -1,6 +1,6 @@
 [
   {
-    "id": 2,
+    "id": 1,
     "title": "Old Skool Shoe",
     "description": "The Iconic Shoe that Brought our Sidestripe to Life: This is the Old Skool",
     "code": "SHO-001",
@@ -13,7 +13,7 @@
     ]
   },
   {
-    "id": 3,
+    "id": 2,
     "title": "Bail Convertible Cross Body Bag",
     "description": "Showing off our iconic checkerboard print, the Bail Convertible Cross Body Bag is a versatile carry-all bag. It features a variety of strap attachments, so you can wear it crossbody or as a shoulder bag, and offers plenty of pockets and storage to keep your essentials safe",
     "code": "ACC-001",
@@ -26,11 +26,11 @@
     ]
   },
   {
-    "id": 4,
+    "id": 3,
     "title": "Knu Skool Checkerboard Shoe",
     "description": "A puffy '90 icon, reimagined",
     "code": "SHO-002",
-    "price": 18000,
+    "price": 200000,
     "status": true,
     "stock": 15,
     "category": "shoes",
