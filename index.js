@@ -1,15 +1,21 @@
 import express from "express";
 import productsRouter  from"./src/routes/products.router.js";
-// import cartsRouter from "./src/routes/cart.router.js";
+import cartsRouter from "./src/routes/cart.router.js";
 
-// debe tener estas 2 rutas desde /api => /products y /carts.
+
 
 const app = express();
 const PORT = 8080;
 app.use(express.json());
 
 app.use('/api/products', productsRouter); //ruta /api/products
-// app.use('/api/carts', cartsRouter); //ruta /api/carts
+app.use('/api/carts', cartsRouter); //ruta /api/carts
+
+
+app.get("/" , (req,res) =>{
+    res.send("Welcome, please use /api/products to se our products OR")
+})
+
 
 //rutas para manejos de carritos  | POST
 // Debe crear un nuevo carrito con la siguiente estructura:
@@ -34,7 +40,7 @@ app.use('/api/products', productsRouter); //ruta /api/products
 
 //Servidor levantado en el puerto 8080
 app.listen(PORT, () => {
-  console.log("Server working on port | 8080 ");
+  console.log("Server working on port | http://localhost:8080 ");
 });
 
 //practica en clase

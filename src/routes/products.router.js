@@ -1,6 +1,7 @@
 import { Router } from 'express';
 import ProductManager from '../managers/productManager.js';
 
+
 const router = Router();
 const productManager = new ProductManager('./src/data/products.json');
 
@@ -50,5 +51,10 @@ router.delete("/:pid", async (req, res) => {
   if (!deleted) return res.status(404).json({ error: "Product not found" });
   res.json({ message: "Product deleted correctly", deleted });
 });
+
+//Para el 404
+router.use((req,res) =>{
+    res.status(404).send("Error 404, Page not found, try to go back!!")
+})
 
 export default router;
