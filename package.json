@@ -3,11 +3,15 @@
     "version": "20.14.0",
     "description": "A backend project for coderhouse",
     "main": "index.js",
+    "type": "module",
     "scripts": {
         "start": "node index.js",
         "test": "echo \"Error: no test specified\" && exit 1"
     },
     "keywords": [],
     "author": "",
-    "license": "ISC"
+    "license": "ISC",
+    "dependencies": {
+        "express": "^5.1.0"
+    }
 }
