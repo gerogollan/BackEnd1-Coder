@@ -16,8 +16,21 @@ router.get("/", async (req, res) => {
 
 //RealtimeProducts
 router.get("/realtimeproducts", async (req, res) => {
-  const products = await productManager.getProducts();
-  res.render("realtimeproducts", { products , layout: "main"});
+   try{
+    const products = await productManager.getProducts();
+    res.render("realtimeproducts",{products});
+   }catch(error){
+    console.error(`error al cargar los productos ${error} `)
+    res.status(500).send("Error al cargar la vista")
+   }
+  
+
 });
+
+//realtimeproducts
+
+
+// const products = await productManager.getProducts();
+// res.render("realtimeproducts", { products , layout: "main"});
 
 export default router;

@@ -1,19 +1,65 @@
 
+import { dirname, resolve } from "node:path";
+import { fileURLToPath } from "node:url";
+import productManager from "./src/managers/productManager.js";
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+const ProductManager = new productManager(resolve(__dirname, "src", "data", "products.json"));
+
+
+
 console.log("archivo cargado");
 
 export default function websocket(io) {
   io.on("connection", (socket) => {
-    console.log("Un nuevo cliente se ha conectado");
     console.log("Id del cliente " + socket.id);
 
-  io.emit("message", "bienvenido al servidor de socket.io");
+ 
+   const sendProducts = async () => {
+    const products = await ProductManager.getProducts();
+  io.emit("update-products", products)
+  console.log("Se emitió update-products con", products.length, "productos");
+
+   }
+   
+   sendProducts();
+
+   socket.on("new-product", async (data) =>{
+    const{
+      title = "",
+      description= "",
+      code = "",
+      price= 0,
+      stock = 0,
+      category="",
+      thumbnails = [],
+      status="",
+    } = data 
+   
+     ProductManager.addProduct(
+      title,
+      description,
+      code,
+      Number(price),
+      Number(stock),
+      category,
+      thumbnails,
+      status,
+     );
+
+     sendProducts();
+
+    });
+
+    socket.on("delete-product", async (id)=> {
+      await ProductManager.deleteProduct(id);
+      sendProducts();
+      
+    }) 
+  })};
 
 
-  });
-
-
-  
-}
 
 
 // io en el servidor - representa el servidor de websocket, 

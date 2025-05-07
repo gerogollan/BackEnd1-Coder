@@ -45,6 +45,10 @@ document.addEventListener('DOMContentLoaded', () => {
       alert('Hubo un error al intentar agregar el producto');
       console.error(error);
     }
+
+    
+    socket.emit("new-product", product)
+    form.reset()
   });
 });
 

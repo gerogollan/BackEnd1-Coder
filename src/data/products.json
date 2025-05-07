@@ -37,31 +37,5 @@
     "thumbnails": [
       "https://images.vans.com/is/image/Vans/VN000D22_BPB_ALT1?wid=1600&hei=1984&fmt=jpeg&qlt=90&resMode=sharp2&op_usm=0.9,1.7,8,0"
     ]
-  },
-  {
-    "id": 4,
-    "title": "Shoee",
-    "description": "A pussy '90 icon, reimagined",
-    "code": "AAA-002",
-    "price": 2000,
-    "status": true,
-    "stock": 15,
-    "category": "shoes",
-    "thumbnails": [
-      "https://images.vasns.com/is/image/Vans/VN000D22_BPB_ALT1?wid=1600&hei=1984&fmt=jpeg&qlt=90&resMode=sharp2&rop_usm=0.9,1.7,8,0"
-    ]
-  },
-  {
-    "id": 5,
-    "title": "Shoeee",
-    "description": "A pussy '90 icon, reimagined",
-    "code": "ABA-032",
-    "price": 20020,
-    "status": true,
-    "stock": 15,
-    "category": "shoes",
-    "thumbnails": [
-      "https://imagees.vasns.com/is/image/Vans/VN000D22_BPB_ALT1?wid=1600&hei=1984&fmt=jpeg&qlt=90&resMode=sharp2&rop_usm=0.9,1.7,8,0"
-    ]
   }
 ]
