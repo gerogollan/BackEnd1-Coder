@@ -1,0 +1,67 @@
+[
+  {
+    "id": 1,
+    "title": "Old Skool Shoe",
+    "description": "The Iconic Shoe that Brought our Sidestripe to Life: This is the Old Skool",
+    "code": "SHO-001",
+    "price": 90000,
+    "status": true,
+    "stock": 12,
+    "category": "shoes",
+    "thumbnails": [
+      "https://images.vans.com/is/image/Vans/VN000D3H_Y28_ALT1?wid=1600&hei=1984&fmt=jpeg&qlt=90&resMode=sharp2&op_usm=0.9,1.7,8,0"
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Bail Convertible Cross Body Bag",
+    "description": "Showing off our iconic checkerboard print, the Bail Convertible Cross Body Bag is a versatile carry-all bag. It features a variety of strap attachments, so you can wear it crossbody or as a shoulder bag, and offers plenty of pockets and storage to keep your essentials safe",
+    "code": "ACC-001",
+    "price": 65000,
+    "status": true,
+    "stock": 7,
+    "category": "accesories",
+    "thumbnails": [
+      "https://images.vans.com/is/image/Vans/VN000MP4_Y28_HERO?wid=1600&hei=1984&fmt=jpeg&qlt=90&resMode=sharp2&op_usm=0.9,1.7,8,0"
+    ]
+  },
+  {
+    "id": 3,
+    "title": "Knu Skool Checkerboard Shoe",
+    "description": "A puffy '90 icon, reimagined",
+    "code": "SHO-002",
+    "price": 200000,
+    "status": true,
+    "stock": 15,
+    "category": "shoes",
+    "thumbnails": [
+      "https://images.vans.com/is/image/Vans/VN000D22_BPB_ALT1?wid=1600&hei=1984&fmt=jpeg&qlt=90&resMode=sharp2&op_usm=0.9,1.7,8,0"
+    ]
+  },
+  {
+    "id": 4,
+    "title": "Shoee",
+    "description": "A pussy '90 icon, reimagined",
+    "code": "AAA-002",
+    "price": 2000,
+    "status": true,
+    "stock": 15,
+    "category": "shoes",
+    "thumbnails": [
+      "https://images.vasns.com/is/image/Vans/VN000D22_BPB_ALT1?wid=1600&hei=1984&fmt=jpeg&qlt=90&resMode=sharp2&rop_usm=0.9,1.7,8,0"
+    ]
+  },
+  {
+    "id": 5,
+    "title": "Shoeee",
+    "description": "A pussy '90 icon, reimagined",
+    "code": "ABA-032",
+    "price": 20020,
+    "status": true,
+    "stock": 15,
+    "category": "shoes",
+    "thumbnails": [
+      "https://imagees.vasns.com/is/image/Vans/VN000D22_BPB_ALT1?wid=1600&hei=1984&fmt=jpeg&qlt=90&resMode=sharp2&rop_usm=0.9,1.7,8,0"
+    ]
+  }
+]
