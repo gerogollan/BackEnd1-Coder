@@ -1,6 +1,6 @@
+node_modules/
 package-lock.json
-node_modules
+css/
 ejercicio.mongodbs.js
-css
-chat.handlebars
-index.handlebars
+views/chat.handlebars
+views/index.handlebars
