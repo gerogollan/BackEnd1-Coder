@@ -35,14 +35,14 @@ document.addEventListener('DOMContentLoaded', () => {
   
       if (response.ok) {
         const newProduct = await response.json();
-        alert('Producto agregado correctamente');
+        console.log('Producto agregado correctamente');
         console.log(newProduct);
       } else {
         const error = await response.json();
-        alert('Error al agregar el producto: ' + error.error);
+        console.log('Error al agregar el producto: ' + error.error);
       }
     } catch (error) {
-      alert('Hubo un error al intentar agregar el producto');
+      console.log('Hubo un error al intentar agregar el producto');
       console.error(error);
     }
 

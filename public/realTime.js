@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
         status: form.status.checked ? "on" : "off",
         stock: form.stock.value,
         category: form.category.value,
-        thumbnails: [form.thumbnail.value]
+        thumbnails: [form.thumbnails.value]
       };
 
      socket.emit("new-product", product)
@@ -33,26 +33,11 @@ document.addEventListener('DOMContentLoaded', () => {
    socket.on("update-products", (products)=>{
     console.log("RECIBIDOS", product.length, "PRODUCTTOS");
 
-   const html = products.map(product => `
-    <div class="product-card" style="margin-bottom: 50px;">
-      <hr>
-      ${product.thumbnails && product.thumbnails.length
-        ? `<img src="${product.thumbnails[0]}" alt="Product Image" width="100" height="100">`
-        : `<p>NO IMAGE</p>`}
-      <p>${product.title}</p>
-      <p>${product.price}</p>
-      <p>${product.description}</p>
-      <button>X</button>
-      <hr>
-    </div>
-  `).join("");
-
-  productContainer.innerHTML = `
-    <h2>Lista de productos</h2>
-    ${html}
-  `;
-});
+   
   
 
-form.reset()
-})
+   })
+
+
+  form.reset()
+})  

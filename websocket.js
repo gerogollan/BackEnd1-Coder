@@ -37,7 +37,7 @@ export default function websocket(io) {
       status="",
     } = data 
    
-     ProductManager.addProduct(
+    await ProductManager.addProduct(
       title,
       description,
       code,
